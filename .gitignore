@@ -8,6 +8,7 @@
 *.sh.e[0-9]*
 
 03_advanced_neural_networks/data/
+04_intro_to_llms/images
 
 logdir
 
