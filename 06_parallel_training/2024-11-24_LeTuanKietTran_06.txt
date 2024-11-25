@@ -1,0 +1,723 @@
+(2024-08-08) (2024-08-08/base) [teikiet@sophia-gpu-04 wordplay]$ mpirun -n "${NGPUS}" python3 -m ezpz.test_dist
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[2024-11-25 00:31:26.219933][INFO][dist.py:92] -
+
+[dist_info]:
+  • DEVICE=cuda
+  • DEVICE_ID=cuda:0
+  • DISTRIBUTED_BACKEND=nccl
+  • GPUS_PER_NODE=8
+  • HOSTS=['sophia-gpu-04.lab.alcf.anl.gov']
+  • HOSTFILE=/var/spool/pbs/aux/38282.sophia-pbs-01.lab.alcf.anl.gov
+  • HOSTNAME=sophia-gpu-04.lab.alcf.anl.gov
+  • LOCAL_RANK=0
+  • MACHINE=Sophia
+  • NUM_NODES=1
+  • NGPUS=8
+  • NGPUS_AVAILABLE=8
+  • NODE_ID=0
+  • RANK=0
+  • SCHEDULER=LOCAL
+  • WORLD_SIZE_TOTAL=8
+  • WORLD_SIZE_IN_USE=8
+  • LAUNCH_CMD=None
+
+
+[2024-11-25 00:31:26.224094][INFO][dist.py:728] - [0/8] Using device='cuda' with backend='DDP' + 'nccl' for distributed training.
+[2024-11-25 00:31:26.226274][INFO][dist.py:348] - [device='cuda'][rank=0/7][local_rank=0/7][node=0/0]
+[2024-11-25 00:31:26.226855][WARNING][dist.py:352] - Using [8 / 8] available
+ "cuda" devices !!
+[2024-11-25 00:31:27.372808][INFO][dist.py:348] - [device='cuda'][rank=7/7][local_rank=7/7][node=0/0]
+[2024-11-25 00:31:27.374918][INFO][dist.py:348] - [device='cuda'][rank=5/7][local_rank=5/7][node=0/0]
+[2024-11-25 00:31:27.378124][INFO][dist.py:348] - [device='cuda'][rank=1/7][local_rank=1/7][node=0/0]
+[2024-11-25 00:31:27.392417][INFO][dist.py:348] - [device='cuda'][rank=6/7][local_rank=6/7][node=0/0]
+[2024-11-25 00:31:27.394884][INFO][dist.py:348] - [device='cuda'][rank=2/7][local_rank=2/7][node=0/0]
+[2024-11-25 00:31:27.421720][INFO][dist.py:348] - [device='cuda'][rank=3/7][local_rank=3/7][node=0/0]
+[2024-11-25 00:31:27.422980][INFO][dist.py:348] - [device='cuda'][rank=4/7][local_rank=4/7][node=0/0]
+[2024-11-25 00:31:29.315368][INFO][dist.py:882] - Setting up wandb from rank: 0
+[2024-11-25 00:31:29.316505][INFO][dist.py:883] - Using: WB PROJECT: ezpz.test_dist
+wandb: Currently logged in as: ultimateantimatter (ultimateantimatter-university-of-utah). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.18.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.17.6
+wandb: Run data is saved locally in /home/teikiet/wordplay/wandb/run-20241125_003132-kwokpz4e
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run deft-music-5
+wandb: ⭐️ View project at https://wandb.ai/ultimateantimatter-university-of-utah/ezpz.test_dist
+wandb: 🚀 View run at https://wandb.ai/ultimateantimatter-university-of-utah/ezpz.test_dist/runs/kwokpz4e
+[2024-11-25 00:31:33.677514][INFO][dist.py:908] - W&B RUN: [deft-music-5](https://wandb.ai/ultimateantimatter-university-of-utah/ezpz.test_dist/runs/kwokpz4e)
+[2024-11-25 00:31:33.855529][INFO][dist.py:304] - Updating wandb.run: deft-music-5 config with "DIST_INFO"
+[2024-11-25 00:31:33.859200][INFO][dist.py:936] - Running on machine='Sophia'
+[2024-11-25 00:31:33.860327][INFO][dist.py:92] -
+
+[CONFIG]:
+  • warmup=0
+  • log_freq=1
+  • batch_size=64
+  • input_size=128
+  • output_size=128
+  • dtype=torch.float32
+  • device=cuda
+  • world_size=8
+  • train_iters=100
+
+
+[2024-11-25 00:31:33.914228][INFO][test_dist.py:147] - model=Network(
+  (layers): Sequential(
+    (0): Linear(in_features=128, out_features=1024, bias=True)
+    (1): Linear(in_features=1024, out_features=512, bias=True)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): Linear(in_features=256, out_features=128, bias=True)
+    (4): Linear(in_features=128, out_features=128, bias=True)
+  )
+)
+[2024-11-25 00:31:36.260042][INFO][test_dist.py:228] - iter=1 dt=0.003676 dtf=0.001298 dtb=0.002377 loss=1973.619385 sps=17412.253114
+[2024-11-25 00:31:36.265020][INFO][test_dist.py:228] - iter=2 dt=0.001929 dtf=0.000586 dtb=0.001343 loss=1315.133057 sps=33177.491631
+[2024-11-25 00:31:36.269256][INFO][test_dist.py:228] - iter=3 dt=0.001897 dtf=0.000558 dtb=0.001339 loss=1212.546143 sps=33738.047369
+[2024-11-25 00:31:36.273407][INFO][test_dist.py:228] - iter=4 dt=0.001837 dtf=0.000509 dtb=0.001327 loss=949.750122 sps=34845.042700
+[2024-11-25 00:31:36.277541][INFO][test_dist.py:228] - iter=5 dt=0.001853 dtf=0.000499 dtb=0.001355 loss=882.427002 sps=34534.743179
+[2024-11-25 00:31:36.281714][INFO][test_dist.py:228] - iter=6 dt=0.001871 dtf=0.000503 dtb=0.001368 loss=816.615723 sps=34207.429787
+[2024-11-25 00:31:36.285888][INFO][test_dist.py:228] - iter=7 dt=0.001886 dtf=0.000521 dtb=0.001365 loss=780.913269 sps=33936.281448
+[2024-11-25 00:31:36.290158][INFO][test_dist.py:228] - iter=8 dt=0.001879 dtf=0.000561 dtb=0.001317 loss=757.573914 sps=34066.578427
+[2024-11-25 00:31:36.294295][INFO][test_dist.py:228] - iter=9 dt=0.001846 dtf=0.000527 dtb=0.001320 loss=742.329224 sps=34662.935061
+[2024-11-25 00:31:36.298414][INFO][test_dist.py:228] - iter=10 dt=0.001789 dtf=0.000488 dtb=0.001301 loss=728.677063 sps=35778.294060
+[2024-11-25 00:31:36.302443][INFO][test_dist.py:228] - iter=11 dt=0.001742 dtf=0.000440 dtb=0.001302 loss=699.701599 sps=36735.692769
+[2024-11-25 00:31:36.306516][INFO][test_dist.py:228] - iter=12 dt=0.001745 dtf=0.000446 dtb=0.001299 loss=706.756958 sps=36673.878434
+[2024-11-25 00:31:36.310629][INFO][test_dist.py:228] - iter=13 dt=0.001791 dtf=0.000446 dtb=0.001346 loss=680.519592 sps=35724.485150
+[2024-11-25 00:31:36.314712][INFO][test_dist.py:228] - iter=14 dt=0.001796 dtf=0.000445 dtb=0.001352 loss=674.833435 sps=35627.655367
+[2024-11-25 00:31:36.318852][INFO][test_dist.py:228] - iter=15 dt=0.001812 dtf=0.000456 dtb=0.001357 loss=678.651917 sps=35310.382131
+[2024-11-25 00:31:36.322904][INFO][test_dist.py:228] - iter=16 dt=0.001769 dtf=0.000480 dtb=0.001289 loss=684.144531 sps=36171.324920
+[2024-11-25 00:31:36.327087][INFO][test_dist.py:228] - iter=17 dt=0.001830 dtf=0.000524 dtb=0.001306 loss=659.816406 sps=34976.674440
+[2024-11-25 00:31:36.331168][INFO][test_dist.py:228] - iter=18 dt=0.001768 dtf=0.000484 dtb=0.001284 loss=649.083435 sps=36208.852023
+[2024-11-25 00:31:36.335232][INFO][test_dist.py:228] - iter=19 dt=0.001765 dtf=0.000466 dtb=0.001300 loss=631.089417 sps=36253.857402
+[2024-11-25 00:31:36.339254][INFO][test_dist.py:228] - iter=20 dt=0.001761 dtf=0.000473 dtb=0.001288 loss=637.779785 sps=36343.166690
+[2024-11-25 00:31:36.343473][INFO][test_dist.py:228] - iter=21 dt=0.001953 dtf=0.000653 dtb=0.001301 loss=618.757263 sps=32762.469684
+[2024-11-25 00:31:36.347559][INFO][test_dist.py:228] - iter=22 dt=0.001787 dtf=0.000449 dtb=0.001338 loss=633.606079 sps=35816.222984
+[2024-11-25 00:31:36.351607][INFO][test_dist.py:228] - iter=23 dt=0.001786 dtf=0.000445 dtb=0.001340 loss=620.377136 sps=35838.338624
+[2024-11-25 00:31:36.355664][INFO][test_dist.py:228] - iter=24 dt=0.001799 dtf=0.000446 dtb=0.001353 loss=610.183044 sps=35568.903233
+[2024-11-25 00:31:36.360180][INFO][test_dist.py:228] - iter=25 dt=0.002173 dtf=0.000436 dtb=0.001737 loss=607.801453 sps=29452.193068
+[2024-11-25 00:31:36.364212][INFO][test_dist.py:228] - iter=26 dt=0.001761 dtf=0.000461 dtb=0.001300 loss=610.762329 sps=36342.782283
+[2024-11-25 00:31:36.368236][INFO][test_dist.py:228] - iter=27 dt=0.001753 dtf=0.000466 dtb=0.001287 loss=605.473633 sps=36510.188469
+[2024-11-25 00:31:36.372255][INFO][test_dist.py:228] - iter=28 dt=0.001768 dtf=0.000462 dtb=0.001306 loss=595.773254 sps=36200.840726
+[2024-11-25 00:31:36.376328][INFO][test_dist.py:228] - iter=29 dt=0.001829 dtf=0.000512 dtb=0.001316 loss=587.866028 sps=34999.476295
+[2024-11-25 00:31:36.380442][INFO][test_dist.py:228] - iter=30 dt=0.001771 dtf=0.000452 dtb=0.001319 loss=586.979065 sps=36144.328440
+[2024-11-25 00:31:36.384490][INFO][test_dist.py:228] - iter=31 dt=0.001747 dtf=0.000449 dtb=0.001298 loss=582.975098 sps=36641.691298
+[2024-11-25 00:31:36.388499][INFO][test_dist.py:228] - iter=32 dt=0.001728 dtf=0.000437 dtb=0.001291 loss=570.743286 sps=37029.789882
+[2024-11-25 00:31:36.392517][INFO][test_dist.py:228] - iter=33 dt=0.001725 dtf=0.000433 dtb=0.001292 loss=568.748474 sps=37110.017424
+[2024-11-25 00:31:36.396713][INFO][test_dist.py:228] - iter=34 dt=0.001860 dtf=0.000447 dtb=0.001413 loss=561.262878 sps=34407.495972
+[2024-11-25 00:31:36.400731][INFO][test_dist.py:228] - iter=35 dt=0.001785 dtf=0.000445 dtb=0.001340 loss=571.284180 sps=35849.780729
+[2024-11-25 00:31:36.404734][INFO][test_dist.py:228] - iter=36 dt=0.001778 dtf=0.000441 dtb=0.001337 loss=559.092834 sps=35989.146998
+[2024-11-25 00:31:36.408769][INFO][test_dist.py:228] - iter=37 dt=0.001777 dtf=0.000442 dtb=0.001336 loss=547.321411 sps=36008.023655
+[2024-11-25 00:31:36.412821][INFO][test_dist.py:228] - iter=38 dt=0.001778 dtf=0.000437 dtb=0.001340 loss=541.006958 sps=36000.515880
+[2024-11-25 00:31:36.417980][INFO][test_dist.py:228] - iter=39 dt=0.001879 dtf=0.000528 dtb=0.001351 loss=549.338989 sps=34068.402425
+[2024-11-25 00:31:36.422103][INFO][test_dist.py:228] - iter=40 dt=0.001797 dtf=0.000495 dtb=0.001302 loss=546.487366 sps=35614.139593
+[2024-11-25 00:31:36.426173][INFO][test_dist.py:228] - iter=41 dt=0.001778 dtf=0.000490 dtb=0.001288 loss=543.577393 sps=36002.948962
+[2024-11-25 00:31:36.430249][INFO][test_dist.py:228] - iter=42 dt=0.001786 dtf=0.000473 dtb=0.001313 loss=532.553833 sps=35834.507525
+[2024-11-25 00:31:36.434263][INFO][test_dist.py:228] - iter=43 dt=0.001746 dtf=0.000462 dtb=0.001284 loss=532.627319 sps=36657.073843
+[2024-11-25 00:31:36.616716][INFO][test_dist.py:228] - iter=44 dt=0.008958 dtf=0.001095 dtb=0.007863 loss=520.862976 sps=7144.384487
+[2024-11-25 00:31:36.621550][INFO][test_dist.py:228] - iter=45 dt=0.002079 dtf=0.000601 dtb=0.001478 loss=522.335876 sps=30779.387658
+[2024-11-25 00:31:36.627185][INFO][test_dist.py:228] - iter=46 dt=0.001794 dtf=0.000443 dtb=0.001351 loss=510.409363 sps=35679.801836
+[2024-11-25 00:31:36.631239][INFO][test_dist.py:228] - iter=47 dt=0.001768 dtf=0.000475 dtb=0.001292 loss=512.639038 sps=36207.421174
+[2024-11-25 00:31:36.635279][INFO][test_dist.py:228] - iter=48 dt=0.001766 dtf=0.000466 dtb=0.001301 loss=506.117218 sps=36230.022716
+[2024-11-25 00:31:36.639438][INFO][test_dist.py:228] - iter=49 dt=0.001733 dtf=0.000444 dtb=0.001289 loss=505.523407 sps=36921.896450
+[2024-11-25 00:31:36.643582][INFO][test_dist.py:228] - iter=50 dt=0.001785 dtf=0.000450 dtb=0.001334 loss=501.009583 sps=35862.877066
+[2024-11-25 00:31:36.647718][INFO][test_dist.py:228] - iter=51 dt=0.001789 dtf=0.000445 dtb=0.001344 loss=482.512054 sps=35775.518747
+[2024-11-25 00:31:36.651752][INFO][test_dist.py:228] - iter=52 dt=0.001772 dtf=0.000446 dtb=0.001326 loss=488.678223 sps=36115.929620
+[2024-11-25 00:31:36.655810][INFO][test_dist.py:228] - iter=53 dt=0.001761 dtf=0.000435 dtb=0.001326 loss=483.353210 sps=36335.345612
+[2024-11-25 00:31:36.659837][INFO][test_dist.py:228] - iter=54 dt=0.001750 dtf=0.000429 dtb=0.001322 loss=474.857483 sps=36562.423277
+[2024-11-25 00:31:36.663979][INFO][test_dist.py:228] - iter=55 dt=0.001769 dtf=0.000473 dtb=0.001296 loss=483.583221 sps=36169.916073
+[2024-11-25 00:31:36.668097][INFO][test_dist.py:228] - iter=56 dt=0.001826 dtf=0.000499 dtb=0.001328 loss=479.562256 sps=35048.261464
+[2024-11-25 00:31:36.672911][INFO][test_dist.py:228] - iter=57 dt=0.002266 dtf=0.000654 dtb=0.001613 loss=475.030457 sps=28240.873113
+[2024-11-25 00:31:36.677047][INFO][test_dist.py:228] - iter=58 dt=0.001783 dtf=0.000505 dtb=0.001278 loss=449.547546 sps=35902.392363
+[2024-11-25 00:31:36.681092][INFO][test_dist.py:228] - iter=59 dt=0.001785 dtf=0.000507 dtb=0.001278 loss=463.845734 sps=35863.064226
+[2024-11-25 00:31:36.685162][INFO][test_dist.py:228] - iter=60 dt=0.001820 dtf=0.000520 dtb=0.001300 loss=453.376892 sps=35164.207526
+[2024-11-25 00:31:36.689178][INFO][test_dist.py:228] - iter=61 dt=0.001755 dtf=0.000473 dtb=0.001281 loss=445.479095 sps=36477.029295
+[2024-11-25 00:31:36.693225][INFO][test_dist.py:228] - iter=62 dt=0.001760 dtf=0.000468 dtb=0.001292 loss=443.332520 sps=36356.818403
+[2024-11-25 00:31:36.699842][INFO][test_dist.py:228] - iter=63 dt=0.001812 dtf=0.000469 dtb=0.001343 loss=441.367432 sps=35317.985963
+[2024-11-25 00:31:36.703850][INFO][test_dist.py:228] - iter=64 dt=0.001761 dtf=0.000443 dtb=0.001317 loss=436.756165 sps=36350.010492
+[2024-11-25 00:31:36.707850][INFO][test_dist.py:228] - iter=65 dt=0.001762 dtf=0.000443 dtb=0.001318 loss=435.697815 sps=36331.388315
+[2024-11-25 00:31:36.711917][INFO][test_dist.py:228] - iter=66 dt=0.001767 dtf=0.000486 dtb=0.001281 loss=438.201416 sps=36224.866165
+[2024-11-25 00:31:36.715978][INFO][test_dist.py:228] - iter=67 dt=0.001775 dtf=0.000501 dtb=0.001274 loss=427.713440 sps=36054.176501
+[2024-11-25 00:31:36.720066][INFO][test_dist.py:228] - iter=68 dt=0.001782 dtf=0.000493 dtb=0.001290 loss=428.165649 sps=35909.859263
+[2024-11-25 00:31:36.724212][INFO][test_dist.py:228] - iter=69 dt=0.001755 dtf=0.000469 dtb=0.001287 loss=420.798676 sps=36457.889934
+[2024-11-25 00:31:36.728205][INFO][test_dist.py:228] - iter=70 dt=0.001752 dtf=0.000465 dtb=0.001287 loss=421.463501 sps=36540.065826
+[2024-11-25 00:31:36.732189][INFO][test_dist.py:228] - iter=71 dt=0.001731 dtf=0.000457 dtb=0.001274 loss=409.681061 sps=36980.470340
+[2024-11-25 00:31:36.736220][INFO][test_dist.py:228] - iter=72 dt=0.001753 dtf=0.000471 dtb=0.001282 loss=409.162903 sps=36510.828601
+[2024-11-25 00:31:36.740247][INFO][test_dist.py:228] - iter=73 dt=0.001769 dtf=0.000481 dtb=0.001288 loss=408.827881 sps=36182.390086
+[2024-11-25 00:31:36.744249][INFO][test_dist.py:228] - iter=74 dt=0.001757 dtf=0.000467 dtb=0.001290 loss=399.119507 sps=36416.313242
+[2024-11-25 00:31:36.748341][INFO][test_dist.py:228] - iter=75 dt=0.001740 dtf=0.000442 dtb=0.001297 loss=408.920746 sps=36783.494799
+[2024-11-25 00:31:36.752383][INFO][test_dist.py:228] - iter=76 dt=0.001716 dtf=0.000441 dtb=0.001276 loss=398.749542 sps=37290.268716
+[2024-11-25 00:31:36.756458][INFO][test_dist.py:228] - iter=77 dt=0.001752 dtf=0.000444 dtb=0.001309 loss=386.971436 sps=36526.703305
+[2024-11-25 00:31:36.760508][INFO][test_dist.py:228] - iter=78 dt=0.001755 dtf=0.000446 dtb=0.001309 loss=391.508606 sps=36462.048956
+[2024-11-25 00:31:36.764523][INFO][test_dist.py:228] - iter=79 dt=0.001771 dtf=0.000449 dtb=0.001321 loss=395.698242 sps=36146.990149
+[2024-11-25 00:31:36.768523][INFO][test_dist.py:228] - iter=80 dt=0.001765 dtf=0.000448 dtb=0.001317 loss=377.914734 sps=36265.585553
+[2024-11-25 00:31:36.772513][INFO][test_dist.py:228] - iter=81 dt=0.001719 dtf=0.000440 dtb=0.001279 loss=381.897278 sps=37237.851945
+[2024-11-25 00:31:36.776598][INFO][test_dist.py:228] - iter=82 dt=0.001783 dtf=0.000441 dtb=0.001342 loss=367.737671 sps=35900.160401
+[2024-11-25 00:31:36.780605][INFO][test_dist.py:228] - iter=83 dt=0.001756 dtf=0.000437 dtb=0.001319 loss=373.330261 sps=36439.987961
+[2024-11-25 00:31:36.784625][INFO][test_dist.py:228] - iter=84 dt=0.001774 dtf=0.000445 dtb=0.001329 loss=362.293518 sps=36082.857171
+[2024-11-25 00:31:36.788635][INFO][test_dist.py:228] - iter=85 dt=0.001762 dtf=0.000441 dtb=0.001321 loss=374.884338 sps=36323.533905
+[2024-11-25 00:31:36.792667][INFO][test_dist.py:228] - iter=86 dt=0.001777 dtf=0.000438 dtb=0.001340 loss=362.039429 sps=36009.042539
+[2024-11-25 00:31:36.797023][INFO][test_dist.py:228] - iter=87 dt=0.001917 dtf=0.000500 dtb=0.001418 loss=357.829407 sps=33377.894231
+[2024-11-25 00:31:36.801315][INFO][test_dist.py:228] - iter=88 dt=0.001852 dtf=0.000518 dtb=0.001334 loss=351.639465 sps=34552.506803
+[2024-11-25 00:31:36.805369][INFO][test_dist.py:228] - iter=89 dt=0.001722 dtf=0.000440 dtb=0.001282 loss=365.709839 sps=37176.750903
+[2024-11-25 00:31:36.809425][INFO][test_dist.py:228] - iter=90 dt=0.001740 dtf=0.000448 dtb=0.001293 loss=340.484222 sps=36775.896372
+[2024-11-25 00:31:36.813483][INFO][test_dist.py:228] - iter=91 dt=0.001739 dtf=0.000452 dtb=0.001287 loss=353.528381 sps=36805.756961
+[2024-11-25 00:31:36.817480][INFO][test_dist.py:228] - iter=92 dt=0.001722 dtf=0.000436 dtb=0.001286 loss=348.438782 sps=37170.698068
+[2024-11-25 00:31:36.821491][INFO][test_dist.py:228] - iter=93 dt=0.001727 dtf=0.000443 dtb=0.001284 loss=332.693512 sps=37065.641386
+[2024-11-25 00:31:36.825500][INFO][test_dist.py:228] - iter=94 dt=0.001729 dtf=0.000443 dtb=0.001286 loss=334.268066 sps=37019.895510
+[2024-11-25 00:31:36.829551][INFO][test_dist.py:228] - iter=95 dt=0.001759 dtf=0.000445 dtb=0.001314 loss=337.729340 sps=36382.303377
+[2024-11-25 00:31:36.833634][INFO][test_dist.py:228] - iter=96 dt=0.001812 dtf=0.000458 dtb=0.001354 loss=340.532745 sps=35317.423276
+[2024-11-25 00:31:36.838079][INFO][test_dist.py:228] - iter=97 dt=0.002133 dtf=0.000443 dtb=0.001690 loss=339.066101 sps=30004.888815
+[2024-11-25 00:31:36.842133][INFO][test_dist.py:228] - iter=98 dt=0.001777 dtf=0.000496 dtb=0.001281 loss=325.641846 sps=36013.703725
+[2024-11-25 00:31:36.960798][INFO][test_dist.py:228] - iter=99 dt=0.116128 dtf=0.051573 dtb=0.064555 loss=326.118378 sps=551.116132
+Failed to download font: IBM Plex Sans, skipping!
+Failed to download font: IBM Plex Sans Condensed, skipping!
+Failed to download font: IBM Plex Serif, skipping!
+[2024-11-25 00:31:39.578376][INFO][history.py:696] - Saving train_iter plot to: /home/teikiet/wordplay/test-dist-plots/mplot
+[2024-11-25 00:31:40.029291][INFO][history.py:696] - Saving train_dt plot to: /home/teikiet/wordplay/test-dist-plots/mplot
+[2024-11-25 00:31:40.424945][INFO][history.py:696] - Saving train_dtf plot to: /home/teikiet/wordplay/test-dist-plots/mplot
+[2024-11-25 00:31:40.837974][INFO][history.py:696] - Saving train_dtb plot to: /home/teikiet/wordplay/test-dist-plots/mplot
+[2024-11-25 00:31:41.233886][INFO][history.py:696] - Saving train_loss plot to: /home/teikiet/wordplay/test-dist-plots/mplot
+[2024-11-25 00:31:41.622658][INFO][history.py:696] - Saving train_sps plot to: /home/teikiet/wordplay/test-dist-plots/mplot
+                        train_iter [2024-11-25-003147]
+    ┌─────────────────────────────────────────────────────────────────────┐
+99.0┤                                                                  ▗▄▀│
+    │                                                               ▄▞▀▘  │
+    │                                                           ▗▄▀▀      │
+82.7┤                                                        ▄▞▀▘         │
+    │                                                    ▗▄▀▀             │
+    │                                                 ▄▞▀▘                │
+66.3┤                                             ▗▄▀▀                    │
+    │                                          ▄▞▀▘                       │
+    │                                      ▗▄▀▀                           │
+50.0┤                                  ▗▄▞▀▘                              │
+    │                               ▄▄▀▘                                  │
+    │                           ▗▄▞▀                                      │
+    │                        ▄▄▀▘                                         │
+33.7┤                    ▗▄▞▀                                             │
+    │                 ▄▄▀▘                                                │
+    │             ▗▄▞▀                                                    │
+17.3┤          ▄▄▀▘                                                       │
+    │      ▗▄▞▀                                                           │
+    │   ▄▄▀▘                                                              │
+ 1.0┤▄▞▀                                                                  │
+    └─┬─┬───┬──┬──┬──┬───┬───┬──┬──┬──┬───┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬─┘
+      2 5  11 16 20 24  30  35 40 44 49  55 58 63 67 72 76 80 84 89 93 98
+train_iter                        train/iter
+[2024-11-25 00:31:47.666967][INFO][plot.py:220] - Appending plot to: /home/teikiet/wordplay/test-dist-plots/tplot/train_iter.txt
+text saved in /home/teikiet/wordplay/test-dist-plots/tplot/train_iter.txt
+                          train_dt [2024-11-25-003147]
+     ┌────────────────────────────────────────────────────────────────────┐
+0.116┤                                                                   ▞│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.097┤                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.078┤                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.059┤                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.040┤                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.021┤                                                                   ▌│
+     │                                                                   ▌│
+     │                             ▗                                     ▌│
+0.002┤▚▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▌▚▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▌│
+     └─┬─┬───┬──┬──┬──┬───┬──┬───┬───┬──┬──┬────┬──┬──┬──┬──┬──┬──┬──┬──┬─┘
+       2 5  11 16 20 24  30 35  40  46 51 55   62 67 71 76 80 84 89 93 98
+train_dt                           train/iter
+[2024-11-25 00:31:47.685486][INFO][plot.py:220] - Appending plot to: /home/teikiet/wordplay/test-dist-plots/tplot/train_dt.txt
+text saved in /home/teikiet/wordplay/test-dist-plots/tplot/train_dt.txt
+                          train_dtf [2024-11-25-003147]
+      ┌───────────────────────────────────────────────────────────────────┐
+0.0516┤                                                                  ▞│
+      │                                                                  ▌│
+      │                                                                  ▌│
+0.0430┤                                                                  ▌│
+      │                                                                  ▌│
+      │                                                                  ▌│
+0.0345┤                                                                  ▌│
+      │                                                                  ▌│
+      │                                                                  ▌│
+0.0260┤                                                                  ▌│
+      │                                                                  ▌│
+      │                                                                  ▌│
+      │                                                                  ▌│
+0.0175┤                                                                  ▌│
+      │                                                                  ▌│
+      │                                                                  ▌│
+0.0090┤                                                                  ▌│
+      │                                                                  ▌│
+      │                                                                  ▌│
+0.0004┤▚▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▚▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▌│
+      └─┬─┬───┬──┬────┬────┬──┬──┬──┬──┬───┬────┬──┬───┬──┬────┬──┬──┬──┬─┘
+        2 5  11 16   24   30 35 40 44 49  55   62 67  72 76   84 88 93 98
+train_dtf                          train/iter
+[2024-11-25 00:31:47.702469][INFO][plot.py:220] - Appending plot to: /home/teikiet/wordplay/test-dist-plots/tplot/train_dtf.txt
+text saved in /home/teikiet/wordplay/test-dist-plots/tplot/train_dtf.txt
+                          train_dtb [2024-11-25-003147]
+     ┌────────────────────────────────────────────────────────────────────┐
+0.065┤                                                                   ▞│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.054┤                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.043┤                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.033┤                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.022┤                                                                   ▌│
+     │                                                                   ▌│
+     │                                                                   ▌│
+0.012┤                                                                   ▌│
+     │                             ▗                                     ▌│
+     │                             ▛▖                                    ▌│
+0.001┤▚▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▌▚▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▌│
+     └─┬─┬───┬──┬──┬──┬───┬──┬───┬───┬──┬──┬────┬──┬──┬──┬──┬──┬──┬──┬──┬─┘
+       2 5  11 16 20 24  30 35  40  46 51 55   62 67 71 76 80 84 89 93 98
+train_dtb                          train/iter
+[2024-11-25 00:31:47.719874][INFO][plot.py:220] - Appending plot to: /home/teikiet/wordplay/test-dist-plots/tplot/train_dtb.txt
+text saved in /home/teikiet/wordplay/test-dist-plots/tplot/train_dtb.txt
+                         train_loss [2024-11-25-003147]
+      ┌───────────────────────────────────────────────────────────────────┐
+1973.6┤▌                                                                  │
+      │▌                                                                  │
+      │▌                                                                  │
+1699.0┤▌                                                                  │
+      │▌                                                                  │
+      │▌                                                                  │
+1424.3┤▌                                                                  │
+      │▌                                                                  │
+      │▝▖                                                                 │
+1149.6┤ ▐                                                                 │
+      │ ▐                                                                 │
+      │ ▐                                                                 │
+      │  ▌                                                                │
+ 875.0┤  ▝▄                                                               │
+      │    ▚▄▖                                                            │
+      │      ▝▀▄▄▄▄                                                       │
+ 600.3┤            ▀▀▀▀▀▀▄▄▄▄▄▄▖                                          │
+      │                        ▝▀▀▀▀▀▚▄▄▄▄▄▄▄▖                            │
+      │                                      ▝▀▀▀▀▀▚▄▄▄▄▄▄▖▗▖             │
+ 325.6┤                                                   ▝▘▝▀▀▀▀▀▀▄▀▚▄▄▄▄│
+      └─┬─┬───┬──┬────┬────┬──┬──┬──┬──┬───┬────┬──┬───┬──┬────┬──┬──┬──┬─┘
+        2 5  11 16   24   30 35 40 44 49  55   62 67  72 76   84 88 93 98
+train_loss                         train/iter
+[2024-11-25 00:31:47.737352][INFO][plot.py:220] - Appending plot to: /home/teikiet/wordplay/test-dist-plots/tplot/train_loss.txt
+text saved in /home/teikiet/wordplay/test-dist-plots/tplot/train_loss.txt
+                           train_sps [2024-11-25-003147]
+       ┌──────────────────────────────────────────────────────────────────┐
+37290.3┤      ▗▄  ▖▗▄   ▗▄▖▗▞▜ ▗▄ ▗ ▖ ▗▄▚ ▄▄▖ ▖ ▄▖▄▄▄▄▄▚▄▄▚▄▄▞▄▄▄▖▗▚▄▀▚▖ ▖│
+       │  ▄▄▗▄▘ ▀▀▝▘▝▄▀▜▌ ▝▘ ▝▞▘ ▚▘▀▌▗▘  ▀  ▝█▝▀ ▝               ▌▌    ▐▐▌│
+       │▞▀  ▘        ▜ ▐▌           ▌▐       █                   ▝     ▐▞▌│
+31167.1┤▌              ▐▌           ▌▐       █                         ▐▌▌│
+       │▌               ▘           ▌▌       █                          ▘▌│
+       │▌                           ▌▌       ▝                           ▌│
+25043.9┤▌                           ▌▌                                   ▌│
+       │▌                           ▌▌                                   ▌│
+       │▌                           ▌▌                                   ▌│
+18920.7┤▌                           ▌▌                                   ▌│
+       │▌                           █                                    ▌│
+       │                            █                                    ▌│
+       │                            █                                    ▌│
+12797.5┤                            █                                    ▌│
+       │                            █                                    ▌│
+       │                            █                                    ▌│
+ 6674.3┤                            ▝                                    ▌│
+       │                                                                 ▌│
+       │                                                                 ▌│
+  551.1┤                                                                 ▚│
+       └─┬─┬───┬──┬────┬───┬───┬──┬──┬───┬──┬───┬───┬──┬──┬────┬──┬──┬──┬─┘
+         2 5  11 16   24  30  35 40 44  51 55  62  67 72 76   84 88 93 98
+train_sps                           train/iter
+[2024-11-25 00:31:47.755444][INFO][plot.py:220] - Appending plot to: /home/teikiet/wordplay/test-dist-plots/tplot/train_sps.txt
+text saved in /home/teikiet/wordplay/test-dist-plots/tplot/train_sps.txt
+[2024-11-25 00:31:47.768198][INFO][test_dist.py:246] - dataset=<xarray.Dataset> Size: 5kB
+Dimensions:     (draw: 99)
+Coordinates:
+  * draw        (draw) int64 792B 0 1 2 3 4 5 6 7 8 ... 91 92 93 94 95 96 97
+ 98
+Data variables:
+    train_iter  (draw) int64 792B 1 2 3 4 5 6 7 8 9 ... 92 93 94 95 96 97 98
+ 99
+    train_dt    (draw) float64 792B 0.003676 0.001929 ... 0.001777 0.1161
+    train_dtf   (draw) float64 792B 0.001298 0.0005857 ... 0.0004957 0.05157
+    train_dtb   (draw) float64 792B 0.002377 0.001343 ... 0.001281 0.06455
+    train_loss  (draw) float32 396B 1.974e+03 1.315e+03 ... 325.6 326.1
+    train_sps   (draw) float64 792B 1.741e+04 3.318e+04 ... 3.601e+04 551.1
+
+  _     ._   __/__   _ _  _  _ _/_   Recorded: 00:31:33  Samples:  7598
+ /_//_/// /_\ / //_// / //_'/ //     Duration: 13.876    CPU time: 18.459
+/   _/                      v5.0.0
+
+Profile at /home/teikiet/wordplay/venvs/2024-08-08/lib/python3.11/site-packages/ezpz/profile.py:101
+
+13.875 <module>  ezpz/test_dist.py:1
+└─ 13.875 main  ezpz/test_dist.py:177
+      [204 frames hidden]  ezpz, xarray, importlib, cupy, numpy,...
+         3.148 poll.poll  <built-in>
+
+
+[2024-11-25 00:31:48.799326][INFO][profile.py:115] - Saving pyinstrument profile output to: /home/teikiet/wordplay/ezpz_pyinstrument_profiles
+[2024-11-25 00:31:48.800439][INFO][profile.py:123] - PyInstrument profile saved (as html) to:  /home/teikiet/wordplay/ezpz_pyinstrument_profiles/pyinstrument-profile-2024-11-25-003148.html
+[2024-11-25 00:31:48.801049][INFO][profile.py:131] - PyInstrument profile saved (as text) to:  /home/teikiet/wordplay/ezpz_pyinstrument_profiles/pyinstrument-profile-2024-11-25-003148.txt
+[2024-11-25 00:31:51.006212][INFO][profile.py:143] - Finished with pyinstrument profiler. Took: 13.87569s
+[2024-11-25 00:31:51.008469][INFO][test_dist.py:269] - [0] runtime=25.044956s
+wandb: / 0.135 MB of 0.135 MB uploaded
+wandb: Run history:
+wandb:   timers/ezpz.setup_torch ▁
+wandb:            timers/imports ▁
+wandb: timers/init_to_first_step ▁
+wandb:                  train/dt ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█
+wandb:                 train/dtb ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█
+wandb:                 train/dtf ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█
+wandb:                train/iter ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇███
+wandb:                train/loss █▅▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                 train/sps ▄▇▇▇████▇██████████████████████████▇███▁
+wandb:
+wandb: Run summary:
+wandb:   timers/ezpz.setup_torch 3.35217
+wandb:            timers/imports 3e-05
+wandb: timers/init_to_first_step 7.9363
+wandb:                  train/dt 0.11613
+wandb:                 train/dtb 0.06455
+wandb:                 train/dtf 0.05157
+wandb:                train/iter 99
+wandb:                train/loss 326.11838
+wandb:                 train/sps 551.11613
+wandb:
+wandb: 🚀 View run deft-music-5 at: https://wandb.ai/ultimateantimatter-university-of-utah/ezpz.test_dist/runs/kwokpz4e
+wandb: ⭐️ View project at: https://wandb.ai/ultimateantimatter-university-of-utah/ezpz.test_dist
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20241125_003132-kwokpz4e/logs
+wandb: WARNING The new W&B backend becomes opt-out in version 0.18.0; try it out with `wandb.require("core")`! See https://wandb.me/wandb-core for more information.
+(2024-08-08) (2024-08-08/base) [teikiet@sophia-gpu-04 wordplay]$ python3 data/shakespeare_char/prepare.py
+Using HF_DATASETS_CACHE=/home/teikiet/wordplay/data/shakespeare_char/.cache/huggingface
+length of dataset in characters: 1,115,394
+all the unique characters:
+ !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+vocab size: 65
+train has 1,003,854 tokens
+val has 111,540 tokens
+(2024-08-08) (2024-08-08/base) [teikiet@sophia-gpu-04 wordplay]$ mpirun -n "${NGPUS}" python3 -m wordplay \
+    train.backend=DDP \
+    train.eval_interval=100 \
+    data=shakespeare \
+    train.dtype=bf16 \
+    model.batch_size=64 \
+    model.block_size=1024 \
+    train.max_iters=1000 \
+    train.log_interval=10 \
+    train.compile=false
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[LOG_CAT_ML] component basesmuma is not available but requested in hierarchy: basesmuma,basesmuma,ucx_p2p:basesmsocket,basesmuma,p2p
+[LOG_CAT_ML] ml_discover_hierarchy exited with error
+[2024-11-25 00:33:03.950742][INFO][configs.py:81] - Setting HF_DATASETS_CACHE to /home/teikiet/wordplay/.cache/huggingface/datasets
+[2024-11-25 00:33:04.799995][INFO][dist.py:92] -
+
+[dist_info]:
+  • DEVICE=cuda
+  • DEVICE_ID=cuda:0
+  • DISTRIBUTED_BACKEND=nccl
+  • GPUS_PER_NODE=8
+  • HOSTS=['sophia-gpu-04.lab.alcf.anl.gov']
+  • HOSTFILE=/var/spool/pbs/aux/38282.sophia-pbs-01.lab.alcf.anl.gov
+  • HOSTNAME=sophia-gpu-04.lab.alcf.anl.gov
+  • LOCAL_RANK=0
+  • MACHINE=Sophia
+  • NUM_NODES=1
+  • NGPUS=8
+  • NGPUS_AVAILABLE=8
+  • NODE_ID=0
+  • RANK=0
+  • SCHEDULER=LOCAL
+  • WORLD_SIZE_TOTAL=8
+  • WORLD_SIZE_IN_USE=8
+  • LAUNCH_CMD=None
+
+
+[2024-11-25 00:33:04.805405][INFO][dist.py:728] - [0/8] Using device='cuda' with backend='DDP' + 'nccl' for distributed training.
+[2024-11-25 00:33:04.807782][INFO][dist.py:348] - [device='cuda'][rank=0/7][local_rank=0/7][node=0/0]
+[2024-11-25 00:33:04.808362][WARNING][dist.py:352] - Using [8 / 8] available
+ "cuda" devices !!
+[2024-11-25 00:33:05.842267][INFO][dist.py:348] - [device='cuda'][rank=2/7][local_rank=2/7][node=0/0]
+[2024-11-25 00:33:05.948111][INFO][dist.py:348] - [device='cuda'][rank=4/7][local_rank=4/7][node=0/0]
+[2024-11-25 00:33:06.010862][INFO][dist.py:348] - [device='cuda'][rank=7/7][local_rank=7/7][node=0/0]
+[2024-11-25 00:33:06.016042][INFO][dist.py:348] - [device='cuda'][rank=3/7][local_rank=3/7][node=0/0]
+[2024-11-25 00:33:06.021586][INFO][dist.py:348] - [device='cuda'][rank=1/7][local_rank=1/7][node=0/0]
+[2024-11-25 00:33:06.027451][INFO][dist.py:348] - [device='cuda'][rank=5/7][local_rank=5/7][node=0/0]
+[2024-11-25 00:33:06.054785][INFO][dist.py:348] - [device='cuda'][rank=6/7][local_rank=6/7][node=0/0]
+[2024-11-25 00:33:07.967082][INFO][configs.py:317] - Loading val from /home/teikiet/wordplay/data/shakespeare_char/val.bin
+[2024-11-25 00:33:07.968702][INFO][configs.py:317] - Loading train from /home/teikiet/wordplay/data/shakespeare_char/train.bin
+[2024-11-25 00:33:07.970349][INFO][configs.py:442] - Tokens per iteration: 524,288
+[2024-11-25 00:33:07.970973][INFO][configs.py:465] - Using self.ptdtype=torch.float16 on self.device_type='cuda'
+[2024-11-25 00:33:07.971518][INFO][configs.py:471] - Initializing a new model from scratch
+[2024-11-25 00:33:07.972427][INFO][dist.py:882] - Setting up wandb from rank: 0
+[2024-11-25 00:33:07.972855][INFO][dist.py:883] - Using: WB PROJECT: WordPlay
+wandb: Currently logged in as: ultimateantimatter (ultimateantimatter-university-of-utah). Use `wandb login --relogin` to force relogin
+/home/teikiet/wordplay/src/wordplay/trainer.py:303: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  grad_scaler = GradScaler(
+/home/teikiet/wordplay/src/wordplay/trainer.py:303: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  grad_scaler = GradScaler(
+/home/teikiet/wordplay/src/wordplay/trainer.py:303: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  grad_scaler = GradScaler(
+/home/teikiet/wordplay/src/wordplay/trainer.py:303: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  grad_scaler = GradScaler(
+/home/teikiet/wordplay/src/wordplay/trainer.py:303: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  grad_scaler = GradScaler(
+/home/teikiet/wordplay/src/wordplay/trainer.py:303: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  grad_scaler = GradScaler(
+[2024-11-25 00:33:10.444912][CRITICAL][trainer.py:318] - "devid='cuda:6'"
+[2024-11-25 00:33:10.445086][CRITICAL][trainer.py:318] - "devid='cuda:5'"
+[2024-11-25 00:33:10.445088][CRITICAL][trainer.py:318] - "devid='cuda:3'"
+[2024-11-25 00:33:10.445321][CRITICAL][trainer.py:318] - "devid='cuda:7'"
+[2024-11-25 00:33:10.445175][CRITICAL][trainer.py:318] - "devid='cuda:2'"
+[2024-11-25 00:33:10.445346][CRITICAL][trainer.py:318] - "devid='cuda:1'"
+/home/teikiet/wordplay/src/wordplay/trainer.py:303: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  grad_scaler = GradScaler(
+[2024-11-25 00:33:10.453718][CRITICAL][trainer.py:318] - "devid='cuda:4'"
+wandb: wandb version 0.18.7 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.17.6
+wandb: Run data is saved locally in /home/teikiet/outputs/runs/pytorch/DDP/2024-11-25/00-33-04/wandb/run-20241125_003310-o6ylntvv
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run scarlet-wave-4
+wandb: ⭐️ View project at https://wandb.ai/ultimateantimatter-university-of-utah/WordPlay
+wandb: 🚀 View run at https://wandb.ai/ultimateantimatter-university-of-utah/WordPlay/runs/o6ylntvv
+[2024-11-25 00:33:11.586777][INFO][dist.py:908] - W&B RUN: [scarlet-wave-4](https://wandb.ai/ultimateantimatter-university-of-utah/WordPlay/runs/o6ylntvv)
+[2024-11-25 00:33:11.591474][INFO][dist.py:304] - Updating wandb.run: scarlet-wave-4 config with "DIST_INFO"
+[2024-11-25 00:33:11.595849][INFO][dist.py:936] - Running on machine='Sophia'
+[2024-11-25 00:33:11.597375][WARNING][__main__.py:93] - {
+    "train": {
+        "framework": "pytorch",
+        "backend": "DDP",
+        "device": null,
+        "seed": null,
+        "port": null,
+        "ds_config_path": null,
+        "precision": null,
+        "ngpus": null,
+        "use_wandb": true,
+        "eval_interval": 100,
+        "log_interval": 10,
+        "eval_iters": 200,
+        "eval_only": false,
+        "always_save_checkpoint": false,
+        "init_from": "scratch",
+        "wandb_project": "WordPlay",
+        "max_iters": 1000,
+        "warmup_iters": 100,
+        "dtype": "bf16",
+        "compile": false
+    },
+    "model": {
+        "n_layer": 12,
+        "n_head": 12,
+        "n_embd": 768,
+        "batch_size": 64,
+        "block_size": 1024,
+        "activation": "gelu",
+        "dropout": 0.0,
+        "bias": false,
+        "vocab_size": 65
+    },
+    "data": {
+        "dataset": "shakespeare_char",
+        "out_dir": "out-shakespeare-char",
+        "root_path": null
+    },
+    "optimizer": {
+        "gas": 1,
+        "name": "AdamW",
+        "learning_rate": 0.0006,
+        "weight_decay": 0.1,
+        "beta1": 0.9,
+        "beta2": 0.95,
+        "grad_clip": 1.0,
+        "decay_lr": true,
+        "lr_decay_iters": 600000,
+        "min_lr": 6e-05
+    }
+}
+[2024-11-25 00:33:11.600615][WARNING][__main__.py:94] - Output dir: /home/teikiet/outputs/runs/pytorch/DDP/2024-11-25/00-33-04
+[2024-11-25 00:33:11.601166][INFO][trainer.py:248] - Initializing a new model from scratch
+[2024-11-25 00:33:12.772075][INFO][model.py:255] - number of parameters: 85.00M
+[2024-11-25 00:33:12.827993][INFO][trainer.py:266] - Model size: num_params=85003776
+[2024-11-25 00:33:12.831319][INFO][model.py:445] - num decayed parameter tensors: 50, with 85,771,008 parameters
+[2024-11-25 00:33:12.831944][INFO][model.py:449] - num non-decayed parameter tensors: 25, with 19,200 parameters
+[2024-11-25 00:33:14.165983][INFO][model.py:465] - using fused AdamW: True
+/home/teikiet/wordplay/src/wordplay/trainer.py:303: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  grad_scaler = GradScaler(
+[2024-11-25 00:33:14.168010][CRITICAL][trainer.py:318] - "devid='cuda:0'"
+[2024-11-25 00:33:14.178769][INFO][trainer.py:358] - • self.model=GPT(
+  (transformer): ModuleDict(
+    (wte): Embedding(65, 768)
+    (wpe): Embedding(1024, 768)
+    (drop): Dropout(p=0.0, inplace=False)
+    (h): ModuleList(
+      (0-11): 12 x Block(
+        (ln_1): LayerNorm()
+        (attn): CausalSelfAttention(
+          (c_attn): Linear(in_features=768, out_features=2304, bias=False)
+          (c_proj): Linear(in_features=768, out_features=768, bias=False)
+          (attn_dropout): Dropout(p=0.0, inplace=False)
+          (resid_dropout): Dropout(p=0.0, inplace=False)
+        )
+        (ln_2): LayerNorm()
+        (mlp): MLP(
+          (c_fc): Linear(in_features=768, out_features=3072, bias=False)
+          (act_fn): GELU(approximate='none')
+          (c_proj): Linear(in_features=3072, out_features=768, bias=False)
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+      )
+    )
+    (ln_f): LayerNorm()
+  )
+  (lm_head): Linear(in_features=768, out_features=65, bias=False)
+)
+[2024-11-25 00:33:14.182904][INFO][trainer.py:359] - • self.grad_scaler=<torch.cuda.amp.grad_scaler.GradScaler object at 0x1499b42a4310>
+[2024-11-25 00:33:14.183966][INFO][trainer.py:360] - • self.model_engine=DistributedDataParallel(
+  (module): GPT(
+    (transformer): ModuleDict(
+      (wte): Embedding(65, 768)
+      (wpe): Embedding(1024, 768)
+      (drop): Dropout(p=0.0, inplace=False)
+      (h): ModuleList(
+        (0-11): 12 x Block(
+          (ln_1): LayerNorm()
+          (attn): CausalSelfAttention(
+            (c_attn): Linear(in_features=768, out_features=2304, bias=False)
+            (c_proj): Linear(in_features=768, out_features=768, bias=False)
+            (attn_dropout): Dropout(p=0.0, inplace=False)
+            (resid_dropout): Dropout(p=0.0, inplace=False)
+          )
+          (ln_2): LayerNorm()
+          (mlp): MLP(
+            (c_fc): Linear(in_features=768, out_features=3072, bias=False)
+            (act_fn): GELU(approximate='none')
+            (c_proj): Linear(in_features=3072, out_features=768, bias=False)
+            (dropout): Dropout(p=0.0, inplace=False)
+          )
+        )
+      )
+      (ln_f): LayerNorm()
+    )
+    (lm_head): Linear(in_features=768, out_features=65, bias=False)
+  )
+)
+[2024-11-25 00:33:14.188273][INFO][trainer.py:361] - • self.optimizer=AdamW (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.95)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: True
+    lr: 0.0006
+    maximize: False
+    weight_decay: 0.1
+
+Parameter Group 1
+    amsgrad: False
+    betas: (0.9, 0.95)
+    capturable: False
+    differentiable: False
+    eps: 1e-08
+    foreach: None
+    fused: True
+    lr: 0.0006
+    maximize: False
+    weight_decay: 0.0
+)
+[2024-11-25 00:33:14.293853][INFO][trainer.py:809] - Startup time: 10.3084
+                Training Legend
+┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        abbr ┃ desc                           ┃
+┡━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│        step │ Current training iteration     │
+│        loss │ Loss value                     │
+│          dt │ Elapsed time per training step │
+│         dtf │ Elapsed time per forward step  │
+│         dtb │ Elapsed time per backward step │
+│         sps │ Samples per second             │
+│ sps_per_gpu │ Samples per second (per GPU)   │
+│         tps │ Tokens per second              │
+│ tps_per_gpu │ Tokens per second (per GPU)    │
+│         mfu │ Model flops utilization        │
+└─────────────┴────────────────────────────────┘
+[2024-11-25 00:33:15.717818][INFO][trainer.py:827] - ['prompt']: 'What is an LLM?'
+[2024-11-25 00:33:15.718961][INFO][trainer.py:831] - ['response']:
+
+What is an LLM?OZWYoVWJ33VhWOVV;qBe
+:
+Le
+
+CmfhiKtRR;f3mcmOS:mmG
+:jiY
+
+;efOt,
+effZ;V-iL-BB.fie:hKBYZuKhhh
+
+&eYZVhoBmmGeCs3,vvKCd&hBKKsKKCvCsfjPA3,U&fGBwieW
+:KCACvCejtWGujdst.f::&ZZhBC&AN-C
+u3GC33
+
+e
+CCKKKCChVo
+&333mmoBLoj;-sstieuGnLOYcgY&SCeoA3euC--WW&oTCzYmh-wohGgCCGKtYT
+[2024-11-25 00:33:56.167313][INFO][trainer.py:892] - step=10 loss=3.13813 dt=0.297674 dtf=0.00683472 dtb=0.0150611 sps=26.875 sps_per_gpu=3.35938 tps=1.76128e+06 tps_per_gpu=220160 mfu=43.9804
+[2024-11-25 00:33:59.130405][INFO][trainer.py:892] - step=20 loss=2.73013 dt=0.296142 dtf=0.00650573 dtb=0.0153769 sps=27.0141 sps_per_gpu=3.37676 tps=1.77039e+06 tps_per_gpu=221299 mfu=44.0032
+[2024-11-25 00:34:02.092290][INFO][trainer.py:892] - step=30 loss=2.56405 dt=0.292858 dtf=0.0103567 dtb=0.0158738 sps=27.317 sps_per_gpu=3.41463 tps=1.79025e+06 tps_per_gpu=223781 mfu=44.0733
+[2024-11-25 00:34:05.060943][INFO][trainer.py:892] - step=40 loss=2.5075 dt=0.2965 dtf=0.0249484 dtb=0.015351 sps=26.9814 sps_per_gpu=3.37268 tps=1.76826e+06 tps_per_gpu=221032 mfu=44.0814
+[2024-11-25 00:34:08.052543][INFO][trainer.py:892] - step=50 loss=2.47161 dt=0.301356 dtf=0.00645713 dtb=0.0160801 sps=26.5467 sps_per_gpu=3.31834 tps=1.73976e+06 tps_per_gpu=217470 mfu=44.0176
+[2024-11-25 00:34:11.040021][INFO][trainer.py:892] - step=60 loss=2.48136 dt=0.292415 dtf=0.0315719 dtb=0.0152387 sps=27.3584 sps_per_gpu=3.41979 tps=1.79296e+06 tps_per_gpu=224120 mfu=44.093
+[2024-11-25 00:34:14.052491][INFO][trainer.py:892] - step=70 loss=2.46444 dt=0.292241 dtf=0.00662709 dtb=0.0165849 sps=27.3747 sps_per_gpu=3.42184 tps=1.79403e+06 tps_per_gpu=224253 mfu=44.1635
+[2024-11-25 00:34:17.066120][INFO][trainer.py:892] - step=80 loss=2.45765 dt=0.308287 dtf=0.00634611 dtb=0.0209253 sps=25.9498 sps_per_gpu=3.24373 tps=1.70065e+06 tps_per_gpu=212581 mfu=43.9938
+[2024-11-25 00:34:20.092784][INFO][trainer.py:892] - step=90 loss=2.435 dt=0.297498 dtf=0.00675954 dtb=0.0220009 sps=26.8909 sps_per_gpu=3.36136 tps=1.76232e+06 tps_per_gpu=220290 mfu=43.995
+[2024-11-25 00:34:23.129454][INFO][trainer.py:892] - step=100 loss=2.4559 dt=0.299518 dtf=0.0063276 dtb=0.0146265 sps=26.7096 sps_per_gpu=3.3387 tps=1.75044e+06 tps_per_gpu=218805 mfu=43.9665
+[2024-11-25 00:34:24.270464][INFO][trainer.py:827] - ['prompt']: 'What is an LLM?'
+[2024-11-25 00:34:24.272259][INFO][trainer.py:831] - ['response']:
+
+What is an LLM?
+NThant for ay youl t here meas t shat benthower thathe thy, t thy le arath
+thy t he our worererer and thast this shis the mureamery ge,
+Thendeer tieth atharoby p d mereate thethar of t sthotheroulat t meamaves no s ht herourd'dr bes d holat s ad theshive
